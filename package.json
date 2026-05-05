@@ -1,0 +1,22 @@
+{
+  "name": "Code Language Translator",
+  "version": "1.0.0",
+  "description": "AI-powered code translator with line-by-line transformation tracing",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/code-translator"
+  },
+  "keywords": [
+    "code-translation",
+    "programming",
+    "language-conversion",
+    "ai",
+    "openai",
+    "gpt",
+    "react",
+    "express",
+    "nodejs"
+  ],
+  "author": "Your Name",
+  "license": "MIT"
+}

@@ -1,0 +1,250 @@
+/* Transformation Display Styles */
+.transformation-section {
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 2px solid #eef2f7;
+}
+
+/* Tab Styles */
+.display-tabs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.tab-btn {
+  padding: 10px 20px;
+  border: none;
+  background: #f0f2f5;
+  color: #64748b;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.tab-btn.active {
+  background: #667eea;
+  color: white;
+}
+
+/* Lab Report Styles */
+.lab-report {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  color: #334155;
+}
+
+.lab-section {
+  margin-bottom: 25px;
+}
+
+.lab-section h4 {
+  color: #1e293b;
+  border-bottom: 2px solid #e2e8f0;
+  padding-bottom: 8px;
+  margin-bottom: 15px;
+  font-size: 1.1rem;
+}
+
+.lab-section p, .lab-section pre {
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.explanation-sub h5 {
+  margin: 15px 0 10px 0;
+  color: #475569;
+  font-size: 0.95rem;
+}
+
+.function-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.function-card {
+  background: #f8fafc;
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+}
+
+.function-card b {
+  display: block;
+  color: #667eea;
+  margin-bottom: 8px;
+  font-size: 1rem;
+}
+
+.function-card p {
+  margin: 4px 0;
+  font-size: 0.85rem !important;
+  color: #64748b;
+}
+
+.var-usage-list {
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+
+.var-usage-list li {
+  font-size: 0.9rem;
+  margin-bottom: 5px;
+  color: #475569;
+}
+
+.complexity-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.complexity-item {
+  background: #f0fdf4;
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px solid #bbf7d0;
+  color: #166534;
+}
+
+.iteration-table-container {
+  overflow-x: auto;
+}
+
+/* Visualizer Styles */
+.visualizer-container {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 20px;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  min-height: 500px;
+}
+
+.visual-pane {
+  background: #f8fafc;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-right: 1px solid #e2e8f0;
+}
+
+.mermaid-diagram {
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.info-pane {
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+}
+
+.step-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.step-badge {
+  background: #667eea;
+  color: white;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.step-controls {
+  display: flex;
+  gap: 8px;
+}
+
+.control-btn {
+  padding: 8px 16px;
+  border: 1px solid #e2e8f0;
+  background: white;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.control-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.control-btn:not(:disabled):hover {
+  background: #f1f5f9;
+  border-color: #cbd5e1;
+}
+
+.step-details h4 {
+  margin-bottom: 10px;
+  color: #1e293b;
+}
+
+.step-description {
+  background: #fff9eb;
+  padding: 15px;
+  border-radius: 8px;
+  border-left: 4px solid #f59e0b;
+  margin-bottom: 20px;
+  font-size: 0.95rem;
+}
+
+.variable-box {
+  background: #f1f5f9;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+.variable-box h5 {
+  margin-bottom: 10px;
+  color: #64748b;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+}
+
+.variable-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.variable-item {
+  background: white;
+  padding: 6px 12px;
+  border-radius: 6px;
+  border: 1px solid #e2e8f0;
+  font-family: monospace;
+  font-size: 0.85rem;
+}
+
+.variable-item b {
+  color: #667eea;
+}
+
+@media (max-width: 900px) {
+  .visualizer-container {
+    grid-template-columns: 1fr;
+  }
+  .visual-pane {
+    border-right: none;
+    border-bottom: 1px solid #e2e8f0;
+    min-height: 300px;
+  }
+}
