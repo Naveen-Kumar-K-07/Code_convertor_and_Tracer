@@ -16,13 +16,15 @@ function App() {
   const [error, setError] = useState('');
   const [languages, setLanguages] = useState([]);
 
+  const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:5000';
+
   useEffect(() => {
     fetchLanguages();
   }, []);
 
   const fetchLanguages = async () => {
     try {
-      const response = await axios.get('http://localhost:5000/api/languages');
+      const response = await axios.get(`${API_URL}/api/languages`);
       setLanguages(response.data.languages);
     } catch (err) {
       console.error('Failed to fetch languages:', err);
@@ -42,7 +44,7 @@ function App() {
     setTranslatedCode('');
 
     try {
-      const response = await axios.post('http://localhost:5000/api/translate', {
+      const response = await axios.post(`${API_URL}/api/translate`, {
         code: sourceCode,
         sourceLanguage,
         targetLanguage,
