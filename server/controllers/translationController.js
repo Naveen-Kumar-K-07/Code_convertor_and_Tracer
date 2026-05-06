@@ -14,7 +14,7 @@ const model = genAI.getGenerativeModel({
 });
 
 const SUPPORTED_LANGUAGES = [
-  'Python', 'JavaScript', 'TypeScript', 'Java', 'C++', 'C#', 'Go', 'Rust', 'PHP', 'Ruby', 'Swift', 'Kotlin', 'R', 'MATLAB', 'SQL',
+  'Python', 'JavaScript', 'TypeScript', 'Java', 'C', 'C++', 'C#', 'Go', 'Rust', 'PHP', 'Ruby', 'Swift', 'Kotlin', 'R', 'MATLAB', 'SQL',
 ];
 
 exports.translateCode = async (req, res) => {
