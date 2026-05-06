@@ -27,6 +27,12 @@ app.use((err, req, res, next) => {
   res.status(500).json({ error: 'An error occurred', message: err.message });
 });
 
-app.listen(PORT, () => {
-  console.log(`Server is running on http://localhost:${PORT}`);
-});
+// Export the app for Vercel Serverless Functions
+module.exports = app;
+
+// Only listen on a port if not running on Vercel
+if (process.env.NODE_ENV !== 'production') {
+  app.listen(PORT, () => {
+    console.log(`Server is running on http://localhost:${PORT}`);
+  });
+}
